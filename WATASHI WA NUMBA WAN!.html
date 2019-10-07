@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+		<title>WATASHI WA NUMBA WAN!</title>
+		<style>
+            * {
+                box-sizing: border-box;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, san-serif;
+            }
+            ::selection, ::-webkit-selection {
+                background-color: rgba(255,255,255,.25);
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                background-color: #000;
+            }
+            #san-diego {
+                position: fixed;
+                z-index: -2;
+                width: 100%;
+                height: 100vh;
+                border: 0;
+            }
+            #overlay {
+                position: fixed;
+                z-index: -2;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0,0,0,.65);
+            }
+            .table {
+                max-width: 100%;
+                overflow: scroll;
+            }
+            th {
+                padding: 10px 25px;
+            }
+            thead > tr > th:nth-child(2){
+                width: 250px;
+            }
+            th,td {
+                color: #fff;
+                font-size: 21px;
+            }
+            tbody > tr:nth-child(11){
+                padding: 30px 15px;
+            }
+            .basic > td, 
+            .supp > td { 
+                padding: 2px;
+                -webkit-border-horizontal-spacing: 0;
+                -webkit-border-vertical-spacing: 0;
+            }
+            .basic:nth-child(even),
+            .supp:nth-child(odd) {
+                background-color: rgba(255,255,255,.25);
+            }
+            #orientation {
+                position: fixed;
+                z-index: 10;
+                top: calc(50vh - 140px);
+                left: calc(50% - 140px);
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 280px;
+                height: 280px;
+                min-height: 260px;
+                background-color: rgba(255,255,255,.875);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                color: #000;
+                font-size: 18px;
+                padding: 15px;
+                border-radius: 20px;
+                text-align: center;
+            }
+            @media screen and (max-width: 767.9px){
+                body {
+                    justify-content: flex-start;
+                }
+                .table {
+                    overflow: hidden;
+                }
+                tr {
+                    overflow: scroll;
+                    -webkit-overflow-scrolling: touch;
+                }
+                th,td {
+                    font-size: 17px;
+                }
+                @media screen and (orientation: portrait){
+                    #orientation {
+                        display: flex;
+                    }
+                }
+            }
+        </style>
+        <script>
+            window.addEventListener("load", () => {
+                document.getElementById("san-diego").src += "&autoplay=1"
+            });
+        </script>
+	</head>
+	<body>
+        <iframe
+            id="san-diego"
+            title="San Diego"
+            src="https://www.youtube.com/embed/0majDKJPay4?start=9&rel=0?version=3&controls=0&showinfo=0&loop=1&playlist=0majDKJPay4"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		></iframe>
+        <div id="overlay"></div>
+        <div id="orientation">
+            Turn device landscape.
+        </div>
+        <!-- ! -->
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>
+						ลำดับ
+					</th>
+					<th>
+						รายวิชา
+					</th>
+
+					<th>
+						ก่อนกลางภาค
+					</th>
+					<th>
+						กลางภาค
+					</th>
+					<th>
+						หลังกลางภาค
+					</th>
+					<th style="border-right: 1px solid #ddd !important;">
+						ปลายภาค
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="border-top: 1px solid #ddd;">
+					<td
+						colspan="10"
+						style="text-align: left; padding-left: 2%; font-weight: bold;line-height: 1;"
+					>
+						พื้นฐาน
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						1.
+					</td>
+					<td>
+						ท33101 ภาษาไทย
+					</td>
+					<td rowb="1" colb="for1">
+						23
+					</td>
+
+					<td rowb="1" colb="sum">
+						10
+					</td>
+
+					<td rowb="1" colb="for2">
+						24
+					</td>
+					<td rowb="1" colb="final">
+						13
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						2.
+					</td>
+					<td>
+						ค33101 คณิตศาสตร์
+					</td>
+					<td rowb="2" colb="for1">
+						27
+					</td>
+
+					<td rowb="2" colb="sum">
+						10
+					</td>
+
+					<td rowb="2" colb="for2">
+						27
+					</td>
+					<td rowb="2" colb="final">
+						6
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						3.
+					</td>
+					<td>
+						ว33101 โลก ดวงดาวและอวกาศ
+					</td>
+					<td rowb="3" colb="for1">
+						24
+					</td>
+
+					<td rowb="3" colb="sum">
+						11
+					</td>
+
+					<td rowb="3" colb="for2">
+						21
+					</td>
+					<td rowb="3" colb="final">
+						12
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						4.
+					</td>
+					<td>
+						ส33101 สังคมศึกษาพื้นฐาน
+					</td>
+					<td rowb="4" colb="for1">
+						23
+					</td>
+
+					<td rowb="4" colb="sum">
+						14
+					</td>
+
+					<td rowb="4" colb="for2">
+						24
+					</td>
+					<td rowb="4" colb="final">
+						10
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						5.
+					</td>
+					<td>
+						ส33102 ประวัติศาสตร์
+					</td>
+					<td rowb="5" colb="for1">
+						24
+					</td>
+
+					<td rowb="5" colb="sum">
+						14
+					</td>
+
+					<td rowb="5" colb="for2">
+						30
+					</td>
+					<td rowb="5" colb="final">
+						12
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						6.
+					</td>
+					<td>
+						พ33101 สุขศึกษาและพลศึกษา
+					</td>
+					<td rowb="6" colb="for1">
+						34
+					</td>
+
+					<td rowb="6" colb="sum">
+						9
+					</td>
+
+					<td rowb="6" colb="for2">
+						33
+					</td>
+					<td rowb="6" colb="final">
+						8
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						7.
+					</td>
+					<td>
+						ศ33101 ศิลปะ/ดนตรี
+					</td>
+					<td rowb="7" colb="for1">
+						32
+					</td>
+
+					<td rowb="7" colb="sum">
+						5
+					</td>
+
+					<td rowb="7" colb="for2">
+						35
+					</td>
+					<td rowb="7" colb="final">
+						7
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						8.
+					</td>
+					<td>
+						ง33101 คอมพิวเตอร์
+					</td>
+					<td rowb="8" colb="for1">
+						36
+					</td>
+
+					<td rowb="8" colb="sum">
+						6
+					</td>
+
+					<td rowb="8" colb="for2">
+						31
+					</td>
+					<td rowb="8" colb="final">
+						7
+					</td>
+				</tr>
+
+				<tr class="basic">
+					<td>
+						9.
+					</td>
+					<td>
+						อ33101 ภาษาอังกฤษ
+					</td>
+					<td rowb="9" colb="for1">
+						24
+					</td>
+
+					<td rowb="9" colb="sum">
+						15
+					</td>
+
+					<td rowb="9" colb="for2">
+						29
+					</td>
+					<td rowb="9" colb="final">
+						16
+					</td>
+				</tr>
+
+				<tr>
+					<td
+						colspan="10"
+						style="text-align: left; padding-left: 2%; font-weight: bold;line-height: 1;"
+					>
+						เพิ่มเติม
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						1.
+					</td>
+					<td>
+						ค33201 คณิตศาสตร์เพิ่มเติม
+					</td>
+					<td rows="1" cols="for1">
+						25
+					</td>
+
+					<td rows="1" cols="sum">
+						10
+					</td>
+
+					<td rows="1" cols="for2">
+						26
+					</td>
+					<td rows="1" cols="final">
+						4
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						2.
+					</td>
+					<td>
+						ว33201 ฟิสิกส์
+					</td>
+					<td rows="2" cols="for1">
+						23
+					</td>
+
+					<td rows="2" cols="sum">
+						12
+					</td>
+
+					<td rows="2" cols="for2">
+						27
+					</td>
+					<td rows="2" cols="final">
+						8
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						3.
+					</td>
+					<td>
+						ว33202 เคมี
+					</td>
+					<td rows="3" cols="for1">
+						26
+					</td>
+
+					<td rows="3" cols="sum">
+						10
+					</td>
+
+					<td rows="3" cols="for2">
+						24
+					</td>
+					<td rows="3" cols="final">
+						10
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						4.
+					</td>
+					<td>
+						ว33203 ชีววิทยา
+					</td>
+					<td rows="4" cols="for1">
+						27
+					</td>
+
+					<td rows="4" cols="sum">
+						10
+					</td>
+
+					<td rows="4" cols="for2">
+						26
+					</td>
+					<td rows="4" cols="final">
+						12
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						5.
+					</td>
+					<td>
+						ส33201 สังคมศึกษาเพิ่มเติม
+					</td>
+					<td rows="5" cols="for1">
+						24
+					</td>
+
+					<td rows="5" cols="sum">
+						14
+					</td>
+
+					<td rows="5" cols="for2">
+						26
+					</td>
+					<td rows="5" cols="final">
+						14
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						6.
+					</td>
+					<td>
+						อ33201 ภาษาอังกฤษเพิ่มเติม
+					</td>
+					<td rows="6" cols="for1">
+						29
+					</td>
+
+					<td rows="6" cols="sum">
+						15
+					</td>
+
+					<td rows="6" cols="for2">
+						29
+					</td>
+					<td rows="6" cols="final">
+						4
+					</td>
+				</tr>
+
+				<tr class="supp">
+					<td>
+						7.
+					</td>
+					<td>
+						อ33202 ภาษาอังกฤษ MLP
+					</td>
+					<td rows="7" cols="for1">
+						24
+					</td>
+
+					<td rows="7" cols="sum">
+						16
+					</td>
+
+					<td rows="7" cols="for2">
+						27
+					</td>
+					<td rows="7" cols="final">
+						15
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- ! -->
+	</body>
+</html>
