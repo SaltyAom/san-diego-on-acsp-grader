@@ -5,13 +5,22 @@ Reveal your score from ACSP grader.
 ## How to
 1) Copy code from [call_san_diego.js](https://raw.githubusercontent.com/aomkirby123/san-diego-on-acsp-grader/master/call_san_diego.js).
   
-2) Then goto [acsp.grader.school/parent](https://acsp.grader.school/parent) then login.  
+2) Goto [acsp.grader.school/parent](https://acsp.grader.school/parent) and login.  
   
 3) Press `F12`. Now on the top right, select `console` and paste the code and press `Enter`.
 ![Open Console](https://raw.githubusercontent.com/aomkirby123/san-diego-on-acsp-grader/master/grader%20preview.png)
   
 Tada! Enjoy your score~
   
+## On iOS device
+1) Make sure you have Shortcut app installed.
+  
+2) Get [San Diego on ACSP Grader](https://www.icloud.com/shortcuts/eed13c9f4bdb4f6ea8a879db99795156?fbclid=IwAR2cyM6HjMoA7lnxYft7hpmVEFWgT82Ag0Xsq_1wB-3PZ5aj_4tJ5wIk4-w).
+  
+3) Open Safari (*Only Safari) and goto [acsp.grader.school/parent](https://acsp.grader.school/parent) and login.  
+  
+4) Tab on share button (middle one on the button) and find and press `San Diego on ACSP Grader`.
+    
 ## License
 #### TLDR: I have no responsibility for your action.
   
