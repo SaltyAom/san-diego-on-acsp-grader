@@ -15,7 +15,7 @@ Tada! Enjoy your score~
 ## On iOS device
 1) Make sure you have Shortcut app installed.
   
-2) Get [San Diego on ACSP Grader](https://www.icloud.com/shortcuts/eed13c9f4bdb4f6ea8a879db99795156?fbclid=IwAR2cyM6HjMoA7lnxYft7hpmVEFWgT82Ag0Xsq_1wB-3PZ5aj_4tJ5wIk4-w).
+2) Get [San Diego on ACSP Grader](https://www.icloud.com/shortcuts/a05715b13f21490a8e4400160a064309?fbclid=IwAR2QUkeFKDH3aov6rH62_4LyhGwPku3s8MNNdY7sLRSi2bcB_cy2XHGm-WY).
   
 3) Open Safari (*Only Safari) and goto [acsp.grader.school/parent](https://acsp.grader.school/parent) and login.  
   
