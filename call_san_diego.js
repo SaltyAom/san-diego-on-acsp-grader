@@ -1,18 +1,6 @@
+/* Last edited: 27 March 2020 11:11+07:00 */
 let pathId = window.location.pathname.replace("/parent/student_report_grade/", "");
-fetch(`/parent/start_student_report_grade?student_id=${pathId}`)
-    .then(res => {
-        return res.json();
-    }).then(studentId => {
-        if (studentId.success) {
-            let task_id = studentId.tasks_id;
-            console.log(`Unique ID: ${task_id}`);
-            if (task_id) callResult(task_id)
-        } else {
-            console.error("No id, lol")
-        }
-    })
-const callResult = task_id => {
-    fetch(`/parent/ajax_get_report_grade_data?task_id=${task_id}`)
+fetch(`/parent/ajax_get_report_grade_data?task_id=${pathId}`)
     .then(res => {
         return res.text()
     }).then(data => {
@@ -24,4 +12,3 @@ const callResult = task_id => {
             }, 1000);</script></head><body><iframe id="san-diego" title="San Diego" src="https://www.youtube.com/embed/0majDKJPay4?start=9&rel=0?version=3&controls=0&showinfo=0&loop=1&playlist=0majDKJPay4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div id="overlay"></div><div id="orientation">Turn device landscape.</div><!-- ! -->${regexEdit}<!-- ! --></body></html>
         `)
     })
-}
