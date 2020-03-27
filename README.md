@@ -1,14 +1,14 @@
 # San Diego on ACSP Grader
 Reveal your score from ACSP grader.
-![Preview](https://raw.githubusercontent.com/aomkirby123/san-diego-on-acsp-grader/master/preview.png)
+![Preview](https://raw.githubusercontent.com/SaltyAom/san-diego-on-acsp-grader/master/preview.png)
   
 ## How to
-1) Copy code from [call_san_diego.js](https://raw.githubusercontent.com/aomkirby123/san-diego-on-acsp-grader/master/call_san_diego.js).
+1) Copy code from [call_san_diego.js](https://raw.githubusercontent.com/SaltyAom/san-diego-on-acsp-grader/master/call_san_diego.js).
   
 2) Goto [acsp.grader.school/parent](https://acsp.grader.school/parent) and login.  
   
 3) Press `F12`. Now on the top right, select `console` and paste the code and press `Enter`.
-![Open Console](https://raw.githubusercontent.com/aomkirby123/san-diego-on-acsp-grader/master/grader%20preview.png)
+![Open Console](https://raw.githubusercontent.com/SaltyAom/san-diego-on-acsp-grader/master/grader%20preview.png)
   
 Tada! Enjoy your score~
   
@@ -26,7 +26,7 @@ Tada! Enjoy your score~
   
 MIT License
   
-Copyright (c) 2019 aomkirby123
+Copyright (c) 2019-2020 SaltyAom
   
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
